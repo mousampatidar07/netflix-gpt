@@ -23,8 +23,7 @@ setisSignInForm(!isSignInFrom);
   const password = useRef(null);
 
   const handleButtonClick=()=>{
-console.log(email.current.value);
-console.log(password.current.value);
+
 const message = checkValidation(email.current.value , password.current.value);
 seterrmessage(message);
 
@@ -38,7 +37,7 @@ createUserWithEmailAndPassword(
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
-    console.log(user);
+   
       navigate("/browse");
     // ...
   })
@@ -58,6 +57,7 @@ signInWithEmailAndPassword(
    .then((userCredential) => {
     // Signed in
     const user = userCredential.user;
+    console.log(user)
 //     updateProfile(user, {
 //   displayName: name.current.value, photoURL: "https://example.com/jane-q-user/profile.jpg"
 // }).then(() => {
@@ -71,7 +71,7 @@ signInWithEmailAndPassword(
 // });
    const {uid , email , displayName} = auth.currentUser;
       dispatch(addUser({uid: uid , email:email , displayName:displayName}));
-    console.log(user);
+    
       navigate("/browse");
     // ...
   })

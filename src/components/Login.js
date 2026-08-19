@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import Header from './Header';
 import { checkValidation } from '../utils/Validate';
 import { auth } from '../utils/firebase';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
